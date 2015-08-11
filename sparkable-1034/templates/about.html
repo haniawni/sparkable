@@ -1,0 +1,68 @@
+<!-- TODO: REPLACE ALL guess-that-song content -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Guess That Song</title>
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+  <script src= "http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="scripts/script.js"></script>
+</head>
+  <body>
+    <div id="buttons">
+    <p class="left_buttons"> <a  href="/home">Home</a></p>
+    <p class="right_buttons"> <a  href="{{logout_url}}">Logout Here</a></p>
+  </div>
+
+    <div class="large_spacer"></div>
+    <div class="small_spacer"></div>
+
+    <div class= "content">
+    <div class="small_spacer"></div>
+    <h1 class="titles">Meet The Creators</h1>
+  </div>
+  <div class="spacer"></div>
+
+    <div class= "content">
+    <div class="small_spacer"></div>
+    <p class="sub_titles">Who would you like to meet first?</p>
+    <div class="spacer"></div>
+
+    <div class="about_style" id="jordan_section">
+            <form id="show_jordan" action="/about" method="get">
+              <div><input class="small_btn_center" type="submit" value="Jordan"></div>
+            </form>
+            <div class="small_spacer"></div>
+            <div id="jordan_div" style="display: none">
+            <img src="images/jordan.JPG" height="200">
+            <p>Jordan Stewart is an 18 year old Computer Scientist from Chicago, IL, attending Howard University. He has been involved with computer science since the age of 8 and loves music and basketball.  </p>
+          </div>
+            <div class="spacer"></div>
+</div>
+
+<div class="about_style" id="alia_section">
+            <form id="show_alia" action="/about" method="get">
+              <div><input class="small_btn_center" type="submit" value="Alia"></div>
+            </form>
+            <div class="small_spacer"></div>
+            <div id="alia_div" style="display: none">
+              <img src="images/alias_picture.jpg" height="200">
+              <p>Alia is from Libertyville, IL, and will be attending UC San Diego. She is passionate about coding and loves her dog Remy.</p>
+            </div>
+            <div class="spacer"></div>
+</div>
+
+<div class="about_style" id="jewel_section">
+            <form id="show_jewel" action="/about" method="get">
+              <div><input class="small_btn_center" type="submit" value="Jewel"></div>
+            </form>
+            <div class="small_spacer"></div>
+            <div id="jewel_div" style="display: none">
+            <img src="images/jewel_pic.jpg" height="200">
+            <p>Jewel is from Naperville,IL, and will be attending University of Illinois. She loves music, life, and laughter. While coding has become a new hobby for her she is very excited to see where life takes her!</p>
+          </div>
+            <div class="spacer"></div>
+</div>
+    </div>
+
+  </body>
+</html>
