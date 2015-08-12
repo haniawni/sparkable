@@ -1,5 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Poiret+One);
 @import url(http://fonts.googleapis.com/css?family=Lobster);
+@import url(http://fonts.googleapis.com/css?family=Play:700);
 
 
 body{
@@ -12,7 +13,8 @@ body{
   background-repeat: repeat-x;
   background-attachment: fixed;
   background-position: center;
-  font-family: 'Lobster', cursive;
+  /*font-family: 'Lobster', cursive;*/
+  font-family: 'Play', sans-serif;
   text-align: center;
   font-size: 20px;
   color: black;
@@ -30,7 +32,8 @@ body.stew {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  font-family: 'Lobster', cursive;
+  /*font-family: 'Lobster', cursive;*/
+  font-family: 'Play', sans-serif;
   text-align: center;
   font-size: 20px;
   color: black;
@@ -68,35 +71,43 @@ body.stew {
   opacity: 0.8;
   padding-bottom: 30px;
   min-width: 500px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #FF9966;
 }
 
 /*words*/
 .sub_titles {
   font-size: 25px;
-  font-family: 'Lobster', cursive;
+  /*font-family: 'Lobster', cursive;*/
+  font-family: 'Play', sans-serif;
   color: #808080;
 }
 .titles {
-  font-family: 'Lobster', cursive;
+  /*font-family: 'Lobster', cursive;*/
+  font-family: 'Play', sans-serif;
   font-size: 50px;
   color:black;
   text-align: center;
   opacity: 1;
 }
 .labels {
-  font-family: 'Lobster', cursive;
+  /*font-family: 'Lobster', cursive;*/
+  font-family: 'Play', sans-serif;
   font-size: 20px;
   color: black;
 }
 .sub_labels {
-  font-family: 'Lobster', cursive;
+  /*font-family: 'Lobster', cursive;*/
+  font-family: 'Play', sans-serif;
   font-size: 20px;
   color: #808080;
 }
 /*buttons*/
 .right_buttons {
   float: left;
-  font-family: 'Lobster', cursive;
+  /*font-family: 'Lobster', cursive;*/
+  font-family: 'Play', sans-serif;
   font-size: 25px;
   text-decoration: none;
   padding: 2px 6px 2px 6px;
@@ -112,7 +123,8 @@ body.stew {
 }
 .left_buttons {
   float: left;
-  font-family: 'Lobster', cursive;
+  /*font-family: 'Lobster', cursive;*/
+  font-family: 'Play', sans-serif;
   font-size: 25px;
   text-decoration: none;
   padding: 2px 6px 2px 6px;
@@ -129,7 +141,8 @@ body.stew {
 .big_btn {
   -moz-border-radius: 20;
   border-radius: 20px;
-  font-family: 'Lobster', cursive;
+  /*font-family: 'Lobster', cursive;*/
+  font-family: 'Play', sans-serif;
   color: #000000;
   font-size: 32px;
   background: #ffffff;
@@ -139,7 +152,8 @@ body.stew {
   width: 275px;
 }
 .small_btn {
-  font-family: 'Lobster', cursive;
+  /*font-family: 'Lobster', cursive;*/
+  font-family: 'Play', sans-serif;
   font-size: 25px;
   text-decoration: none;
   padding: 2px 6px 2px 6px;
@@ -155,7 +169,8 @@ body.stew {
   float: left;
 }
 .small_btn_center {
-  font-family: 'Lobster', cursive;
+  /*font-family: 'Lobster', cursive;*/
+  font-family: 'Play', sans-serif;
   font-size: 25px;
   text-decoration: none;
   padding: 2px 6px 2px 6px;
@@ -185,13 +200,15 @@ form {
    background: url(new_arrow.png) no-repeat right #ddd;
    border: 1px solid #ccc;
    background-color: ##FF9933;
-   font-family: 'Lobster', cursive;
+   /*font-family: 'Lobster', cursive;*/
+  font-family: 'Play', sans-serif;
    font-size: 20px;
    }
 
 #home_large {
   margin-left: 483px;
-  font-family: 'Lobster', cursive;
+  /*font-family: 'Lobster', cursive;*/
+  font-family: 'Play', sans-serif;
   font-size: 20px;
   text-decoration: none;
   padding: 2px 6px 2px 6px;
@@ -237,24 +254,6 @@ display: block;
 text-align: center;
 }
 
-.countdown h1 {
-font-size: 40px;
-font-weight: 300;
-margin-top: 20px;
-/*line-height: 80px;*/
-font-family: 'Lobster', cursive;
-}
-
-.countdown p {
-color: #a7abb1;
-font-size: 11px;
-word-spacing: 20px;
-}
-.img {
-  height: 12px;
-  margin-top: -1%;
-  display: inline;
-}
 
 
 #buttons a, a:visited {
@@ -266,18 +265,6 @@ word-spacing: 20px;
   text-decoration: underline;
 }
 
-#questions {
-  padding-bottom: 30px;
-}
-
-#questions p {
-  font-size: 18px;
-}
-
-#question_num {
-  display: inline;
-  font-size: 25px;
-}
 
 #what_is_this {
   margin: -25px 0 15px 17%;
@@ -293,9 +280,4 @@ word-spacing: 20px;
 #jewel_div {
   width:400px;
   margin-left: 350px;
-}
-
-
-#friends p {
-  display: inline;
 }

@@ -36,6 +36,7 @@ function verifyUnique(name, fb_url){
       $("#url_error").fadeOut(3000);
     }
     if (data.fb_urlUnique && data.nameUnique){
+      alert("This person has been added!");
       window.location.href = "/";
       //TODO: redirect to that persons page
     }
@@ -53,8 +54,8 @@ $(document).ready(
   function() {
     $('#new_person_form').on('submit', verifyPerson)
     $('#show_new_person').on('submit', showNewPerson)
-    $(".big_btn").hover(function(){
-    $(this).css("background", "#FF9933");
+    $(".small_btn_center").hover(function(){
+    $(this).css("background", "#FF9966");
     }, function(){
     $(this).css("background", "white");
   });

@@ -19,8 +19,18 @@
   <div class="spacer">
   </div>
     <div class= "content">
-    <div class="small_spacer">
+    <div class="spacer">
     </div>
+
+    <form id="see_opinion" action="/see_opinions" method="get">
+      <div><input class="small_btn_center" type="submit" value="See All Opinions"></input></div>
+    </form>
+    <div class="spacer"></div>
+
+    <form id="new_opinion" action="/add_opinion" method="get">
+      <div><input class="small_btn_center" type="submit" value="Make New Opinion"></input></div>
+    </form>
+        <!-- <div class="small_spacer"></div> -->
 
     <form id="show_new_person" action="/" method="get">
     <p>
@@ -35,18 +45,12 @@
       <div class="labels">Enter their FB url: <input name="fb_url" id="fb_url"></input></div>
       <div><input class="small_btn_center" type="submit" value="Add Person"></div>
     </p>
-    <div class="spacer"></div>
+    <div class="small_spacer"></div>
     </form>
     <p id="person_error" style="display: none"></p>
     <p id="url_error" style="display: none"></p>
     <p id="repeat_error" style="display: none"></p>
     <p id="not_valid" style="display: none"></p>
-
-
-    <form id="new_opinion" action="/add_opinion" method="get">
-      <div><input class="small_btn_center" type="submit" value="Make New Opinion"></input></div>
-    </form>
-    <div class="spacer"></div>
     </div>
   </body>
 </html>

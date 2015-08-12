@@ -22,11 +22,6 @@ from google.appengine.api import users
 import random
 import logging
 import json
-from datetime import datetime
-
-start = None
-# start = datetime.now()
-
 
 
 
@@ -62,6 +57,15 @@ class AddOpinionHandler(webapp2.RequestHandler):
         template = JINJA_ENVIRONMENT.get_template('templates/add_opinion.html')
         self.response.write(template.render())
 
+class SeeOpinionsHandler(webapp2.RequestHandler):
+    def get(self):
+        opinions=Opinion.query().fetch()
+        num_opinions=len(opinions)
+
+        template_values={"opinions": opinions, "num_opinions":num_opinions}
+        template = JINJA_ENVIRONMENT.get_template('templates/see_opinions.html')
+        self.response.write(template.render(template_values))
+
 
 class SubmitPersonHandler(webapp2.RequestHandler):
     def post(self):
@@ -96,22 +100,23 @@ class SubmitOpinionHandler(webapp2.RequestHandler):
         confidence=self.request.get("confidence")
         response={}
 
-        name_results=Person.query().filter(Person.name==name).fetch()
-        if name_results:
-            response["nameUnique"]=False
-
+        origin_results=Person.query().filter(Person.name==origin).fetch()
+        if origin_results:
+            response["originValid"]=True
+            origin_person=origin_results[0]
         else:
-            response["nameUnique"]=True
-
-        fb_results=Person.query().filter(Person.fb_url==fb_url).fetch()
-        if fb_results:
-            response["fb_urlUnique"]=False
+            response["originValid"]=False
+        target_results=Person.query().filter(Person.name==target).fetch()
+        if target_results:
+            response["targetValid"]=True
+            target_person=target_results[0]
         else:
-            response["fb_urlUnique"]=True
+            response["targetValid"]=False
 
-        if response["nameUnique"] and response["fb_urlUnique"]:
-            person=Person(name=name,fb_url=fb_url)
-            person.put()
+        if response["originValid"] and response["targetValid"]:
+            print "BUTTS"
+            opinion=Opinion(origin=origin_person,target=target_person,rating=float(rating), confidence=float(confidence))
+            opinion.put()
         self.response.headers['Content-Type'] = "application/json"
         self.response.out.write(json.dumps(response))
 
@@ -125,6 +130,7 @@ app = webapp2.WSGIApplication([
     ('/', HomeHandler),
     ('/add_opinion', AddOpinionHandler),
     ('/submitPerson',SubmitPersonHandler),
-    ('/submitOpinion',SubmitPersonHandler),
+    ('/submitOpinion',SubmitOpinionHandler),
+    ('/see_opinions',SeeOpinionsHandler),
     ('/about', AboutHandler)
 ], debug=True)
