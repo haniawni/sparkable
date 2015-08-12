@@ -6,7 +6,7 @@ body{
   background-size: cover;
   background-position: 0px 0px;
   /*background-image: url("tumblr-backgrounds-design-ideas-9.jpg");*/
-  background-image: url('/images/background.JPG');
+  background-image: url('http://i.ytimg.com/vi/MGRhJf0xdE8/maxresdefault.jpg');
   background-size: cover;
   background-size: 1400px;
   background-repeat: repeat-x;
@@ -184,7 +184,7 @@ form {
    overflow: hidden;
    background: url(new_arrow.png) no-repeat right #ddd;
    border: 1px solid #ccc;
-   background-color: #6495ED;
+   background-color: ##FF9933;
    font-family: 'Lobster', cursive;
    font-size: 20px;
    }

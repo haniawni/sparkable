@@ -1,0 +1,45 @@
+<!-- TODO: REPLACE ALL guess-that-song content -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Sparkable</title>
+<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src= "http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="scripts/script.js"></script>
+</head>
+  <body>
+    <div class="large_spacer">
+    </div>
+
+    <div class= "content">
+    <div class="small_spacer"></div>
+    <h1 class="titles">Sparkable</h1>
+    <p class="sub_titles">Add your opinion!</p>
+    <div class="small_spacer"></div>
+    </div>
+
+    <div class="spacer">
+    </div>
+
+    <div class="content">
+      <form id="new_opinion_form" action="/add_opinion" method="get">
+      <p>
+        <div class="labels">Your name: <input name="origin" id="origin"></input></div>
+        <div class="labels">Other person's name: <input name="target" id="target"></input></div>
+        <div class="labels">Rating of their sparkability: <input name="rating" id="rating"></input></div>
+        <div class="labels">Confidence in your opinion: <input name="confidence" id="confidence"></input></div>
+        <div><input class="small_btn_center" type="submit" value="Add Opinion"></div>
+      </p>
+      <div class="spacer"></div>
+      </form>
+      <p id="origin_error" style="display: none"></p>
+      <p id="target_error" style="display: none"></p>
+      <p id="rating_error" style="display: none"></p>
+      <p id="confidence_error" style="display: none"></p>
+    <div class="spacer"></div>
+  </div>
+    </form>
+  </body>
+</html>
